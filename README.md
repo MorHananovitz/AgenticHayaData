@@ -1,3 +1,5 @@
+![hayaData 2026: The agent is live! October 20, 2026, David InterContinental, Tel Aviv](assets/hayadata-2026-save-the-date.png)
+
 # Hayadata Conference Copilot (Claude skill)
 
 An unofficial Claude skill for attendees of [hayaData 2026](https://haya-data.com/), the not-for-profit data community conference held on 20 October 2026 at the David InterContinental Hotel, Tel Aviv. It helps attendees find relevant talks, build a conflict-free personal agenda, and look up facts about sessions and speakers.
@@ -28,6 +30,10 @@ All times are local conference time in Israel (Asia/Jerusalem).
 hayadata-conference-copilot-skill/
 ├── README.md
 ├── LICENSE
+├── assets/
+│   └── hayadata-2026-save-the-date.png
+├── .gitignore
+├── .gitattributes
 └── hayadata-conference-copilot/        <- the skill folder
     ├── SKILL.md                        <- required: frontmatter + instructions
     ├── Hayadata_Sessions.csv           <- 50 sessions
@@ -62,10 +68,11 @@ If counts, hours, or break times change, update `SKILL.md` to match (it mentions
 ## Notes
 
 - The CSVs use a UTF-8 BOM and CRLF line endings. `.gitattributes` stops git from rewriting them.
+- The banner image is the official hayaData 2026 save-the-date artwork. It belongs to hayaData and is not covered by the MIT License.
 - Session titles, descriptions, and speaker bios come from the hayaData program and belong to the conference and its speakers. The skill answers only from this data and does not invent sessions, speakers, or times.
 
 ## License
 
 The skill instructions (`SKILL.md`) and this README are released under the [MIT License](LICENSE).
 
-The MIT License does not cover `Hayadata_Sessions.csv` and `Hayadata_Speakers.csv`. Their content (session titles and descriptions, speaker names and bios) comes from the hayaData program and remains the property of the conference and its speakers.
+The MIT License does not cover `Hayadata_Sessions.csv` and `Hayadata_Speakers.csv`, or the banner image in `assets/`. Their content (session titles and descriptions, speaker names and bios, and the save-the-date artwork) comes from hayaData and remains the property of the conference and its speakers.

@@ -1,0 +1,32 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Build and packaging output (attach .skill files to GitHub Releases instead)
+*.skill
+*.zip
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local environment and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Scratch and temp files
+tmp/
+*.log
