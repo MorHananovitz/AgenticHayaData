@@ -28,8 +28,6 @@ All times are local conference time in Israel (Asia/Jerusalem).
 hayadata-conference-copilot-skill/
 ├── README.md
 ├── LICENSE
-├── .gitignore
-├── .gitattributes
 └── hayadata-conference-copilot/        <- the skill folder
     ├── SKILL.md                        <- required: frontmatter + instructions
     ├── Hayadata_Sessions.csv           <- 50 sessions
