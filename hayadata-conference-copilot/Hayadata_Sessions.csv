@@ -1,0 +1,355 @@
+﻿session_id,title,description,speakers,domain,talk_format,duration_minutes,track,start_time,end_time_calculated,schedule_note
+HD-001,From Startup Nation to AI Nation,"""What does it actually take to build a Data and AI strategy for an entire nation?
+ 
+ In this keynote, we’ll pull back the curtain on Israel's AI initiatives and explore the horizon for the data and AI ecosystem.
+ 
+ We'll examine the real-world challenges of nation-scale data, from infrastructure to regulations, and new opportunities for the data and AI community.
+ 
+ Finally, we'll look inward at our own industry: as AI reshapes tech, how are the roles of Data Engineers, Scientists, and Analysts evolving, and what skills will define the next generation of data leaders?""",Noa Lubin,Culture,30-minute deep dive talk,30,Track A,2026-10-20 09:45,2026-10-20 10:15,
+HD-002,Hello Dad,"My father’s memories - and mine - became the memories of an AI companion.
+ 
+ As dementia made everyday connection harder, I built “Hello Dad”: a WhatsApp bot that used family photos, familiar stories, people, places, and small personal details to help bring memories back into conversation.
+ 
+ But the real challenge was not building the bot. It was understanding how to revive a memory in a way that felt useful and enjoyable, which stories were worth bringing up, how to phrase them gently, and how to tell whether the conversation was helping or causing confusion.
+ 
+ In this talk, I’ll share how I turned our shared memories into something the agent could use, what I learned from following the conversations, and how AI helped create a few more moments of recognition and connection with my father.",Gil Ben-Ami,Culture,15-minute regular talk,15,Track A,2026-10-20 10:20,2026-10-20 10:35,
+HD-003,Agentic Data Retrieval in the Real World: Lessons from Building a Medical Chart Agent,"Data retrieval is already one of the most valuable capabilities that agentic systems bring to enterprises. Healthcare is no exception — efficient search of clinical data is a central challenge of healthcare AI, since clinical reasoning depends on accurate retrieval from huge volumes of patient data.
+ 
+ But clinical data is also the kind of data engineers hate: schemaless, deeply temporal, inconsistent, and constantly changing. And that’s even before the accuracy and privacy requirements that healthcare demands. How do you get an agent to retrieve reliably from that?
+ 
+ That was the challenge behind ALICE, a medical chart agent now in daily use by clinicians to answer clinical questions, support diagnostic decisions, and surface risks. In this talk I’ll walk through Alice’s agentic retrieval core, its data architecture, the problems we had to solve, and the design decisions that made efficient retrieval possible in a demanding, real-world medical environment.",Alon Agmon,Data Engineering,30-minute deep dive talk,30,Track A,2026-10-20 11:00,2026-10-20 11:30,
+HD-004,Stackless Data Engineering: Shipping Data Products as Software,"Bottom line: A real production story of stack-less, AI-led data engineering that scales.
+ 
+ 
+ 
+ We all know the traditional stack. As Wiz's Head of Data, I scaled Snowflake, dbt and Looker for 2,500 people. Today I lead data engineering at Sweet Security with no stack: no orchestrator, no dbt, no BI tool. Shocking? Maybe. Scalable, for sure. Data products run in production like any backend service, an organic part of the R&D stack.
+ 
+ 
+ 
+ Dashboards are dead: that's not the news, it's the catalyst. Account teams wanted a daily overview about hundreds of data points. I skipped the dashboard: filters and views aren't how people want updates, so we moved from pull to push. And because nobody wants AI slop or meaningless charts, I made it proactive: report only what matters, and let an LLM decide who to inform and when.
+ 
+ 
+ 
+ You'll leave knowing which parts of the stack you need, how to run data products as software, and where to use LLM judgment. Drop the data stack. What's left is engineering.",Omer Ginosar,Data Analytics & BI,30-minute deep dive talk,30,Track C,2026-10-20 11:00,2026-10-20 11:30,
+HD-005,"Fully Agentic, Autonomous ML: From Data to Production","Manufacturing produces torrents of high-dimensional test data, but the engineers who understand it aren't ML specialists — and ML specialists don't scale to every product line. We built a platform where a graph of specialized AI agents (data preparation, feature engineering, leakage defense, model selection, training, evaluation, and deployment), steered by an LLM supervisor, takes a domain expert from a raw file to a deployed, monitored model without opening a notebook. This deep dive walks the real architecture: composable LangGraph pipelines, an LLM reasoning loop wrapped around classic ML and AutoML (not replacing it), and GPU training on Kubernetes. Just as important, it covers the tradeoffs — where LLM judgment helps versus where deterministic ML must stay in charge — and the honest failure modes of running this on wide, messy, real-world data at scale. The through-line: putting real, production ML in the hands of the people who know the data.",Itamar Frenkel,Data Science,30-minute deep dive talk,30,Track B,2026-10-20 11:00,2026-10-20 11:30,
+HD-006,Are You Actually Listening? Building a Real-Time Attention Analysis App,"Ready to make your data speak? Join us to learn how to construct powerful AI agents that interact directly with your Iceberg tables using Snowflake. This session provides a practical exploration of Snowflake Cortex Analyst, Cortex Search, and Snowflake Intelligence, showcasing how these tools bridge the gap between complex data and intuitive, natural language conversations for all your users.",Matan Sarig,Data Engineering,30-minute deep dive talk,30,Track D,2026-10-20 11:00,2026-10-20 11:30,
+HD-007,Leaving Batch Behind: Stream-Time Rule Processing Without Linear Cost,"Security detections are only as useful as their freshness. For years, many detection pipelines treated rules as SQL queries over historical data: powerful, flexible, and easy to reason about, but fundamentally batch-oriented, creating a delay between suspicious activity and actionable signal.
+ 
+ 
+ 
+  At Cato, we moved this workload into real-time stream processing. The challenge was evaluating thousands of detection rules continuously without adding proportional overhead to every event. Instead of asking “does this rule match this event?” 500 times, the engine asks “which rules match the values already present in this event?”. As a result we just run one query instead of 500.
+ 
+ 
+ 
+ We will cover moving from batch SQL scans over S3 to streaming rule evaluation, preserving throughput stable as rule count grows. We will also share benchmark results comparing this approach to traditional rule libraries and show what it takes to make real-time detection practical at production scale.",Noa Baron,Data Engineering,15-minute regular talk,15,Track A,2026-10-20 11:35,2026-10-20 11:50,
+HD-008,Be Gone Medallion: How We Cut 60% of Our Data Code,"If you could design your company's entire data pipeline from scratch, how would you do it? We couldn't start over, so we rebuilt 95% of it instead.
+ 
+ Our biggest bottleneck wasn't our warehouse or AI - it was the complexity we'd accumulated over the years. Medallion architecture was one of the first things to go, leaving us with redundant models, spaghetti code, and ownership split across layers. We simplified our data model, untangled our SQL knot, redefined observability and QA, and redrew the lines between data engineers and analysts.
+ 
+ One humbling lesson: Claude will happily adapt to your existing data problems - it's up to you to fix them. We had to tackle data debt before AI could truly help.
+ 
+ The result: 60% less production code, 70% faster compute at no extra cost, 100% data fault ownership, and 3X more accurate ask-your-data agents.
+ 
+ You'll leave with practical insights for simplifying mature data platforms so they're easier for both humans and AI to work with.",Ayala Adler,Data Analytics & BI,15-minute regular talk,15,Track C,2026-10-20 11:35,2026-10-20 11:50,
+HD-009,Fishing the Best SLM Open-Source Models Out of the Sea of Options,"When LLMs are not a scalable option anymore, where do we go?
+ 
+ When our production environment started to strain from an expanding customer list, we had to face this hard question.
+ 
+ Our LLM usage limits were maxing out, returning errors to a growing percent of users, our latency was sub-optimal and let’s not even talk about the cost pile-up.
+ 
+ We decided SLMs (Small Language Models) are our running candidate for alleviating all the issues in one go, and that open-source models are the quickest way there.
+ 
+ But now we had to face a new question: Out of the whole ocean of open-source available models, how do we choose the right one?
+ 
+ In this lecture I will break down the method we created to measure models and decide what is the best implementation strategy for our data classification pipeline.",Naveh Talmon Chvaicer,Data Science,15-minute regular talk,15,Track B,2026-10-20 11:35,2026-10-20 11:50,
+HD-010,When AI Agents Meet Big Data: Three Lessons from Production,"What breaks first when an AI agent meets big data: response time, cost, or trust? Through three real customer use cases, this session presents three practical lessons from production systems built with Single Store: capturing conversational traces to evaluate and continuously improve agent behavior; using curated SQL examples to control latency, accuracy, and cost; and combining filters, joins, and semantic search to analyze a mix of structured and unstructured data. We will examine the architectural decisions behind these systems and what teams learned while moving from prototype to production. While the implementations use SingleStore, the lessons apply across data platforms.",Ilya Gulman,Data Engineering,15-minute regular talk,15,Track D,2026-10-20 11:35,2026-10-20 11:50,
+HD-011,When Your Streaming Pipeline Can Think: AI Agents Inside Apache Flink,"Everyone's building AI agents. Almost nobody's running them on live data. The typical architecture is a complex and fragile distributed system that must maintain consistency between all its pieces - Kafka consumer, LangChain, vector DB, scheduler, retry logic. Every part is a consistency gap.
+ 
+ 
+ 
+ What if the agent WAS the stream processor? No Kafka-to-LangChain-to-VectorDB plumbing. No retry logic. No consistency gaps between detection and action. State, checkpoints, exactly-once tool execution - all inherited, not bolted on.
+ 
+ 
+ 
+ This talk covers the patterns: hybrid rules + LLM reasoning, durable execution that survives crashes, and per-entity memory across events. All live, using Apache Flink Agents - a new open-source framework, which is part of the apache flink ecosystem - with demos spanning detection, investigation, and autonomous action.","Avichay Marciano, Liat Iusim",Data Engineering,30-minute deep dive talk,30,Track A,2026-10-20 11:55,2026-10-20 12:25,
+HD-012,How We Stopped Guessing Whether Our AI Features Actually Work,"Shipping an AI feature is the easy part. Knowing whether it performs well is a different problem - and most teams are still guessing.
+ 
+ 
+ 
+ At HoneyBook, we had a growing portfolio of LLM-powered features and no systematic way to evaluate them. A standalone eval platform felt like its own product, and rigorous evaluation demanded a rare mix of data expertise, business context, and metrics knowledge most engineers don't have.
+ 
+ 
+ 
+ So we built evaluation into the developer workflow itself. This talk shows how we built an AI-powered eval skill into Claude Code that automates the full pipeline: it reads your service code, generates evaluation criteria, creates test data from production examples and LLM-generated edge cases, runs your service end-to-end, and publishes results to Notion - no extra instrumentation required.
+ 
+ 
+ 
+ By the end, you'll know how to stop guessing whether your AI features work by embedding automated evaluation into your workflow.","Noa Radin, Yonathan Guttel",Data Science,30-minute deep dive talk,30,Track B,2026-10-20 11:55,2026-10-20 12:25,
+HD-013,The Data Lies Between the Silos,"A login succeeds. Minutes later, account details change and money moves. Each system sees an ordinary event. No system sees the complete attack.
+ 
+ At a large fintech company, the journey crossed three organizations: Identity saw authentication, Trust & Safety saw behavior and fraud labels, and Fintech saw financial actions. Each measured the same incident differently, and none trusted the others’ number.
+ 
+ 
+ 
+ We needed to separate two journeys hidden inside one account: the customer’s and the attacker’s. The breakthrough was not another model. It was shared session context, a data contract connecting authentication, behavior, account changes, and transactions.
+ 
+ Yet a join key cannot create trust. This talk reveals what it took to align definitions, ownership, lineage, and coverage, and offers a PM playbook for turning fragmented events into a journey teams can trace, challenge, and act on.",Ira Sharlin,Data Products,15-minute regular talk,15,Track C,2026-10-20 11:55,2026-10-20 12:10,
+HD-014,A Self-Driving Data Stack Needs a Map: Building the Context Graph for Autonomous Analytics & DE,"Almost every data team uses AI now. Almost none trust it to run on its own. We wanted to know why, so we took the agents apart.
+ 
+ 
+ 
+ We ran them against real enterprise data and studied every failure by hand. We watched an agent join before it aggregated and drown a simple question in millions of rows. We watched another find a real anomaly and confidently invent the cause. Most failures had the same root: the agent could reach everything in the stack and understood almost none of it.
+ 
+ 
+ 
+ So we built the context layer, one piece at a time, and measured what each piece changes. In this session we’ll open it up. You’ll see how to turn cryptic column names into something an agent can actually find, where the joins your team relies on are hiding when most were never written down, and how to hand an agent the few columns it needs out of tens of thousands. We’ll also show what open-source catalogs already give you, and what you still have to build yourself.
+ 
+ 
+ 
+ You’ll leave with a blueprint you can start on next week, and a simple way to benchmark your own agents so you know it’s working.",Gilad Grushka,Data Engineering,30-minute deep dive talk,30,Track D,2026-10-20 11:55,2026-10-20 12:25,
+HD-015,"Dashboards Aren't Dying, They're Getting a Sidekick","Everyone's arguing whether AI is going to kill the dashboard or the dashboard survives. At WSC Sports we think that's the wrong fight - the future isn't dashboards vs. agents, it's dashboards with an agent embedded inside them. A stakeholder should be able to look at a report and just ask it a follow-up question, right there, without leaving the page or opening a chat window. I'll share how we're combining our agent-built HTML reports with an embedded data agent, why keeping the dashboard matters (it's still the fastest way to see a trend at a glance), what the agent adds on top (ad-hoc questions, drill-downs, explanations), and what building this hybrid actually requires - trust, grounding, and reusing the permission model we already had.",Haim Moscovici,Data Analytics & BI,15-minute regular talk,15,Track C,2026-10-20 12:10,2026-10-20 12:25,
+HD-016,The End of Clicks: Product Analytics for Conversational AI,"When your product is a conversational AI agent, traditional product analytics don't apply. There are no clicks, no funnels, and only 1% of users leave explicit feedback. So how do you know if your AI is delivering value?
+ 
+ 
+ 
+ I'll share how we built LLM based classifiers that answer two questions at scale: what are customers asking, and did they get a useful answer? We infer outcomes from how users behave in the conversation (rephrasing, contradicting, abandoning) and built a ground truth dataset to measure and improve precision across prompt iterations. This gave us a clear picture of what customers care about most, where the agent falls short, and what to build next.
+ 
+ 
+ 
+ You'll walk away with a practical approach to measuring AI products when your only raw material is unstructured text.",Mor Hasson,Data Products,15-minute regular talk,15,Track C,2026-10-20 12:30,2026-10-20 12:45,
+HD-017,"All Models Are Wrong, but Who Owns Them Now? The Data Scientist’s Role When Everyone Builds AI","For years, data scientists owned the modeling part of technology work. We were the people brought in when a problem became uncertain, statistical, or messy enough that traditional deterministic engineering patterns no longer applied. But that world is changing fast.
+ 
+ 
+ 
+ Today, experienced developers and AI engineers can build features that once sat deep inside the data science domain: classification, ranking, retrieval, prediction, evaluation, and agentic workflows.
+ 
+ 
+ 
+ This talk is about what data scientists bring when everyone around them can now build with AI. We will discuss the shift from sole modeling expert to mentor, evaluator, and quality guardian for AI-enabled systems: helping teams think clearly about uncertainty, understand when an expected outcome might only work sometimes, evaluate it honestly, monitor it in production, and design feedback loops that make it better over time.",Raz Tamir,Data Science,15-minute regular talk,15,Track B,2026-10-20 12:30,2026-10-20 12:45,
+HD-018,Works on My Prompt: What a Data Scientist Wishes Engineers Knew About LLMs in Production,"Production LLM systems fail politely. Every call returns 200, every JSON parses, and the
+ 
+ wrong answer sails straight through. 
+ 
+ 
+ 
+ Engineering instincts were trained on deterministic code: a passing test means it works,
+ 
+ a green dashboard means it's healthy, a retry means a second chance. Put an LLM, or a
+ 
+ fleet of agents, in the loop and none of that holds. Part of your system is now
+ 
+ stochastic, and it fails in ways your stack was never built to notice.
+ 
+ 
+ 
+ This is a 101 for engineers who aren't data scientists: which habits break, and what
+ 
+ replaces them. Contracts that pin data better, acceptance by statistics, not a
+ 
+ single green run, and alerts that fire on significance.
+ 
+ 
+ 
+ You’ll leave knowing how to better reason about the part of your system that depends on the prompt, the temperature, and apparently the phase of the moon.",Itay Vegh,Data Engineering,5-minute lightning talk,5,Track A,2026-10-20 12:30,2026-10-20 12:35,
+HD-019,Feed Your LLM Live Enterprise Data - With Zero-Code AI Context,"""Generative AI is only as smart as the live enterprise context behind it, but today, most organizations rely on custom code to bridge the gap between enterprise data and LLM-ready context.
+ 
+ 
+ 
+ In this session, you'll discover how Knowledge Mart replaces that complexity with a native ETL-to-Vector bridge built directly into the data pipeline. It seamlessly connects legacy databases, data warehouses, and file systems to AI vector engines, automating chunking, embedding generation, target loading, and real-time CDC vector synchronization.
+ 
+ 
+ 
+ The result is an AI-ready knowledge layer that keeps your LLM as current as your enterprise data - with no glue code, no manual integration, and no synchronization headaches.""","Ori Kelsi, Eyal Shoham",Data Engineering,30-minute deep dive talk,30,Track D,2026-10-20 12:30,2026-10-20 13:00,Overlaps fixed lunch (12:55-13:45); verify source schedule.
+HD-020,Synthetic Data: How Something Fake Prepares for Anything Real,"This talk is about engineering synthetic data to hit all three: realistic, complex, and diverse. I'll walk through grounding it in real distributions, deliberately injecting the mess and edge cases real systems produce, and expanding coverage into the long tail on purpose instead of by accident. Then the loop that makes it compound: as new failures surface in production, they feed back into your synthetic scenarios — so your agent keeps getting tested against a harder, broader world and keeps getting better over time.
+ 
+ 
+ 
+ Underneath it all is the harder question: how you decide when your generated scenarios are good enough to trust, and how you prove it.",Reut Vilek,Data Science,5-minute lightning talk,5,Track A,2026-10-20 12:35,2026-10-20 12:40,
+HD-021,You Don't Need to Read Every Paper,"A new model drops every week. A new agent framework claims to change everything every day. A new term is trending on Twitter and you're not sure what it is. If you've ever closed fifty ""must-read"" AI tabs without reading one, you know the feeling. FOMO.
+ 
+ Five years inside an AI research lab building foundation models, teaching, speaking, and staying elbow-deep in the ecosystem the whole time, taught me the FOMO doesn't go away with seniority. It goes away when you stop optimizing for coverage. One rule, five minutes: the filter I use to decide what's actually worth my attention this week, and permission to ignore the rest.",Yuval Belfer,Culture,5-minute lightning talk,5,Track A,2026-10-20 12:40,2026-10-20 12:45,
+HD-022,The Pink Elephant in the Prompt: How Language Shapes LLM Behavior,"When integrating LLMs into data pipelines and analytics products, we often make one critical mistake: we talk to the model like it is a human colleague. We use vague instructions, rely on negative constraints, and assume the model understands our context. But LLMs do not read between the lines; they are mathematical prediction engines where the exact phrasing we choose literally dictates the probability distribution of their output.
+ 
+ In this 5-minute lightning talk, we will explore the tangible impact of language mechanics on LLM performance. We will dive into five highly actionable, structural language tweaks that data practitioners can use to drastically improve LLM reliability in production.",Ronnie Weinbach,Data Analytics & BI,5-minute lightning talk,5,Track A,2026-10-20 12:45,2026-10-20 12:50,
+HD-023,"How Do I Win the ""Gambling""... Uhhh, Oops, I Mean the Guessing Game of the FIFA World Cup?","Every major football tournament comes with the same office tradition: the prediction pool. Overnight, everyone becomes a football expert. Why bother following the sport all year when you can ask an LLM to predict every match five minutes before the deadline? What could possibly go wrong?
+ 
+ 
+ 
+ ""What's offside?"" you ask. Great question! I have absolutely no idea. So I did what any reasonable engineer would do: I asked an LLM to help me predict every match. The result was obvious: I absolutely dominated... the bottom of the leaderboard.
+ 
+ 
+ 
+ Then I realized I was asking the wrong questions. I stopped treating the LLM like an oracle and started treating it like a researcher. 
+ 
+ 
+ 
+ And the results were.... Marvelous!",Maor Grushko,Data Science,5-minute lightning talk,5,Track A,2026-10-20 12:50,2026-10-20 12:55,
+HD-024,From Prompt to Prod: A Multi-Agent Architecture for Self-Healing Data Pipelines,"This talk presents a multi-agent system that detects, diagnoses, and self healing data incidents and the architecture choices that made it trustworthy in production. The core principle: deterministic orchestration on the outside, LLM reasoning on the inside. Agents reason over lineage and metadata graphs instead of guessing, propose fixes inside an isolated sandbox, and are gated by validation contracts set up front, so a “fixer” can’t heal a pipeline by deleting the failing test. Every production-impacting action stays human-approved and reversible.
+ 
+ The verdicts are grounded in live data, not just metadata: agents run checks inside the client’s secured sandbox, querying the warehouse and calling source product database data with production credentials, to compare against ground truth. Credentials and data never leave the client boundary. I’ll cover the detect → diagnose →heal topology, where to draw the autonomy line, the failure modes we hit, and a customer incident resolved e2e.",Liad Hazoot,Data Engineering,15-minute regular talk,15,Track A,2026-10-20 13:45,2026-10-20 14:00,
+HD-025,Optimization in 3D: Cost Aware AI Development,"Imagine rolling back a production model - not because it was inaccurate or unreliable, but because it was simply too expensive to run. It happened to me.
+ 
+ LLMs introduced a new optimization dimension to machine learning: cost. Unlike accuracy or latency, it's easy to overlook until a model reaches production, when changing course becomes expensive.
+ 
+ In this talk, I'll share how that experience changed the way we build AI systems at Navina. We'll explore the framework we developed to make cost visible from day one: defining cost KPIs alongside model quality, comparing research alternatives by both performance and price, and building cost awareness into every stage of development. I'll also share practical techniques that significantly reduced inference costs while maintaining model performance.
+ 
+ Attendees will leave with practical strategies for balancing quality, latency, and cost before a model ever reaches production.",Mica Rubinson,Data Science,15-minute regular talk,15,Track B,2026-10-20 13:45,2026-10-20 14:00,
+HD-026,"From ""Wow, Claude Did It!"" to Now What? Navigating the Data Delivery Dilemma in the Age of AI","Every data team has this moment: someone drops a CSV into Claude and, in 20 minutes, produces an insight that would have taken the BI team three sprints to build. The Slack thread blows up. Leadership wants it in production by Thursday.
+ 
+ And then comes the question nobody has a clean answer for: Now, where does this actually live?
+ 
+ Do you productize it in Looker? Move it to Snowflake? Leave it in the LLM? And before you can even decide, a shiny new tool drops that promises to do all of the above.
+ 
+ Using a real story from our team, we’ll look at what happens when a quick-and-dirty POC needs to become a reliable, production-ready data delivery. 
+ 
+ No clean answers here- just an honest map of the tradeoffs so you can make the call for your team.",Orit Mansur,Data Analytics & BI,15-minute regular talk,15,Track C,2026-10-20 13:45,2026-10-20 14:00,
+HD-027,Making Agentic AI Work for Enterprise Clients: The Enrichment Layer Behind Every System,"Executing AI agents are only as good as the context behind them. At Twine, we built an enrichment system that turns raw data into agent-ready context for end-to-end identity and security execution. This talk covers design decisions: which steps require an LLM and which remain deterministic, how one agent reads your knowledge base to draft rules while another agent resolves edge cases, and how feedback compounds so that every new platform added enriches what came before. We will cover system design considerations including cost, latency, and smart data enrichment funnels, and examples such as account ownership and orphaned account investigations that surface security insights, risk scoring for entities at scale, and access mapping based on the organization’s defined processes.",Chen Fradkin,Data Engineering,15-minute regular talk,15,Track D,2026-10-20 13:45,2026-10-20 14:00,
+HD-028,When AI Learns the Rules of the Game - Alignment Faking and the Future of AI Evaluation,"AI systems are increasingly evaluated using benchmarks, automated tests, and human reviews. But what happens when a model learns how to succeed in the evaluation itself?
+ 
+ 
+ 
+ Using Alignment Faking as a case study, this session explores the growing gap between benchmark performance and trustworthiness. We'll examine why passing evaluations doesn't necessarily mean an AI system is reliable, what this means for organizations deploying AI in production, and how modern teams can build stronger evaluation, monitoring, and governance frameworks.
+ 
+ 
+ 
+ Attendees will leave with practical lessons for evaluating AI systems beyond accuracy scores and benchmark results.",Ben Zagagy,Data Science,30-minute deep dive talk,30,Track B,2026-10-20 14:05,2026-10-20 14:35,
+HD-029,Cold Storage That Feels Like an Online Database at 200ms,"Getting online-database feel from cold S3 storage — sounds too good to be true. It isn't.
+ 
+ Cold data doesn't need to live in expensive online databases. But keeping it accessible within an online latency budget after moving it to a data lake? Harder than expected.
+ 
+ This is the story of removing abstractions one by one — the SQL engine, the query planner, the file reader, the network layer — until what remained was fast enough and cheap enough. Each layer we stripped revealed how data lake formats actually work, and unlocked another 300ms of latency at a fraction of the cost.
+ 
+ You'll leave with a clear mental model of what's inside a data lake file format, where managed solutions hit their limits, and a practical approach for the next latency problem that off-the-shelf tooling can't solve.",Dotan Mor,Data Engineering,30-minute deep dive talk,30,Track A,2026-10-20 14:05,2026-10-20 14:35,
+HD-030,The AI PM Superpower: Turning AI Interactions into Product Decisions,"Agentic products are fundamentally more open-ended than traditional software. They give us something we've never had before: an unprecedented, unfiltered window into how people use our products.
+ 
+ Unlike deterministic software, AI agents don't follow predefined paths. Users discover unexpected use cases, work around limitations and reveal unmet needs. The roadmap isn't shaped only by feature requests or product vision anymore -it's hidden inside conversations, execution traces, and real interactions.
+ 
+ Drawing from my experience as both an AI PM and Product Analyst, this talk explores how to turn these rich, disconnected signals into product insight. We'll explore how combining agent behavior, user interactions and AI evaluations can make product discovery more data-driven, uncover new opportunities, identify frustration before it becomes churn, and build products based on what users are actually trying to accomplish-not what we assume they need.",Dafna Friedman,Data Products,30-minute deep dive talk,30,Track C,2026-10-20 14:05,2026-10-20 14:35,
+HD-031,From Proof of Concept to Proof at Scale: Building AI Infra on AWS,"""Building high-impact enterprise AI requires matching every AI solution to the right underlying infrastructure from day one. When serving thousands of enterprise customers, an early infrastructure or algorithmic flaw can quickly balloon into major performance, reliability, and cost issues that are painful to fix down the line.
+ 
+ In this session, we will share our journey of building from scratch one of our core AI products, leveraging a recommendation engine for enterprise security, and scaling it for over 1,000 enterprise customers across 13 AWS regions. We will take you from the initial research and proof of concept to a fully scalable, enterprise-grade production stack.
+ 
+ Along the way, we will highlight the crucial interface between the Data Scientist, Data Engineer, and MLOps roles, demonstrating how true cross-disciplinary collaboration shaped the architecture, development, deployment, and ongoing operation of the system.","Or Shoham, Eli Shemesh, David Ohayon",Data Engineering,30-minute deep dive talk,30,Track D,2026-10-20 14:05,2026-10-20 14:35,
+HD-032,The Slide Was Perfect. The Photo Wasn't: How to Fit an Image to an Auto-Generated Lesson,"What do you do when your AI generates a lesson slide faster than a human ever could - and then embarrasses you with the wrong photo?
+ 
+ That was our problem: matching an image to a slide's generated text, out of ~130M photos, in about a second. We tried the obvious fix - better captions - and it looked fine, until it didn't scale.
+ 
+ So we built an evaluation system instead: an LLM judge and a test set aligned with what our PMs actually wanted. The eval didn't just grade us, it showed us where the system failed, which let us sharpen retrieval for a +20% gain, then add filtering and reranking to clear the bar for an actual teacher.
+ 
+ This talk is really about that shift - from picking images by eye to building a feedback loop that keeps improving on its own. We'll close with where we think this goes next: Bing vs. Getty, and vision-language pipelines.",Noa Shahar,Data Science,15-minute regular talk,15,Track B,2026-10-20 14:40,2026-10-20 14:55,
+HD-033,The Human Moat: Why Business Definitions Are Your Unfair Competitive Edge,"If your value as a data professional is tied to how fast you write SQL, your moat is already gone. AI turned code generation into a commodity overnight. But modern data platforms don’t break because of bad syntax, they break because they hit messy human realities and shifting business alignments.
+ 
+ The real bottleneck is no longer technical execution. We experienced this firsthand at Sola Security when a simple question: ""how many paying customers do we have?"" returned three completely conflicting answers from Stripe, Salesforce, and Finance. No LLM could resolve that logical mess. It required human business judgment.
+ 
+ Throwing out the romanticized AI hype, this session delivers an unfiltered playbook on building 'The Human Moat'. I’ll share how we turned chaotic business logic into production-grade infrastructure at Sola using a semantic model and live metrics. You’ll leave with practical methods to defuse definition landmines and structurally lock down your company’s data moat.",Stav Grinboim,Data Analytics & BI,15-minute regular talk,15,Track C,2026-10-20 14:40,2026-10-20 14:55,
+HD-034,Breaking the Bottlenecks of External Memory Sorting,"Sorting is an integral part of a data engineer's pipeline, yet it is often overlooked. In this talk we will take a look at a production bottleneck: a multi-PiB workload that required us to scale more sorters than writers. We will take a deep dive into adapting classic External Merge Sort to our use case. By using a multi-layered optimization approach we will fit the algorithm to our compute resources by leveraging the CPU cache and multiple cores, and to our data by exploiting the non-uniform distribution.",Shahar Yarnitzky,Data Engineering,15-minute regular talk,15,Track A,2026-10-20 14:40,2026-10-20 14:55,
+HD-035,Modeling User Value: A Statistical Approach to Lifetime Value Prediction,"""Predicting lifetime user value sounds straightforward - until you look at the data. Most users generate little or no value, while a small fraction can account for a disproportionate share of the total, making standard prediction and evaluation approaches surprisingly unreliable.
+ 
+ In this talk, we’ll explore the statistical challenges of LTV modeling and practical approaches for dealing with zero-inflated, highly skewed outcomes. We’ll look at how to build and evaluate models that account for both the large share of users with little or no value and the small number of users who drive a disproportionate share of total value, and how to turn these predictions into useful signals for decision-making across marketing, product, and other business applications.""","Jasmine Herszage, PhD",Data Science,15-minute regular talk,15,Track D,2026-10-20 14:40,2026-10-20 14:55,
+HD-036,The Evolution of the Data Scientist: From Agentic Euphoria to Cascading AI Architecture,"For a while, the instinct was to put a ""cool"" agent responsible for every task. Then the bills and latency came in. Most of that work could've been handled far more cheaply by classic ML.
+ 
+ 
+ 
+ That's why production teams are shifting to a three-tier cascade: deterministic logic, classic ML triage, and confidence-gated LLM escalation. I'll show this architecture, then how to upgrade it.
+ 
+ 
+ 
+ Most teams stop at escalating to the LLM only when needed. The real improvement is a teacher-student loop where LLM output on hard cases retrains the classic model beneath it. The LLM's job isn't just to answer what the cheap tier can't; it ensures the cheap tier needs it less next time.
+ 
+ 
+ 
+ I'll also cover the trap teams fall into: treating the confidence threshold like a technical setting rather than an economic cost-and-risk trade-off that can build or break user trust.
+ 
+ 
+ 
+ You'll leave with a blueprint for this hybrid cascade and a pattern for using LLMs to teach your models, not just do their work.",Maya Malamud,Data Science,15-minute regular talk,15,Track B,2026-10-20 15:00,2026-10-20 15:15,
+HD-037,"AI Last, Not First: A Deterministic-First Approach to Analytical Products","The instinct with a capable model is to reach for it everywhere. I'll argue the opposite: use AI only when it's genuinely the right tool. In the Insights Hub, every number is computed deterministically, which raises confidence, keeps results reproducible, and cuts token cost. There's a quieter payoff too: for analysts stepping into building, deterministic math protects your credibility - you stand behind every number instead of scratching your head over a hallucination that lands on you as if your professionalism slipped. 
+ 
+ That discipline also sharpens the one place AI earns its keep: not calculating, but sketching the narrative- shaping how each story is told. I'll show where I draw the deterministic-vs-AI line and how it holds even when building on-demand flows: even a chat agent doesn't necessarily mean everything is AI- users get open-ended access while recipes and deterministic flows stay enforced underneath.",Hila Sagges,Data Analytics & BI,15-minute regular talk,15,Track C,2026-10-20 15:00,2026-10-20 15:15,
+HD-038,Store Your AI Agent's Memory and Context in a Knowledge Graph,"Most AI agents today suffer from digital amnesia: they forget conversations, lose context between sessions, and treat every interaction as if meeting you for the first time. We explore how knowledge graphs can serve as persistent, temporally-aware memory systems for AI agents, moving beyond static vector embeddings to dynamic, relationship-rich storage that evolves with each interaction. This content piece covers practical implementation patterns for building graph-based agent memory, comparing direct database integration with tool-based approaches through popular frameworks. You'll learn how to extract entities from conversations, model temporal relationships, and implement cross-session continuity that makes agents truly conversational partners rather than stateless responders.","Guy Korland, PhD",Data Engineering,15-minute regular talk,15,Track A,2026-10-20 15:00,2026-10-20 15:15,
+HD-039,"Match Day: Real-Time OLAP, Live on Your Lakehouse - No Copies","""Interactive apps, live dashboards, and AI agents need real-time analytics - millisecond answers at high concurrency. The usual fix is to copy data out of the lakehouse into a separate real-time OLAP store, with its own governance, cost, and staleness.
+ 
+ 
+ 
+ Lakehouse//RT removes the copy. It's a query engine that serves the same governed Delta and Iceberg tables at millisecond latency, right where your data already lives - no second store to build, secure, or keep in sync.
+ 
+ 
+ 
+ In this demo, everything runs live on 100M+ rows of real football match-event data. One screen is a live match dashboard; the other is a console showing every query and its exact latency. We fire the same queries two ways - the old copy-first approach and Lakehouse//RT - in a single-query race, then a concurrency storm of many users at once. You watch seconds collapse to milliseconds, on screen, in real time.""",Ben Hazan,Data Engineering,15-minute regular talk,15,Track D,2026-10-20 15:00,2026-10-20 15:15,
+HD-040,When Streaming Titans Collide: Spark 4.0™ and Apache Flink in the Age of Real-Time AI,"For years, the line was clear: Apache Flink owned ultra-low-latency, event-driven processing while Apache Spark dominated high-throughput streaming. Spark 4.0 redraws this line. Real-Time Mode brings continuous low-latency processing to Structured Streaming, and the new transformWithState API delivers the flexible state management that event-driven systems demand.
+ 
+ In this session, we will dive into a technical discussion of both Spark and Apache Flink, exploring Spark's transformWithState and RTM alongside Flink's mature event-time engine.
+ 
+ 
+ 
+ As the two engines converge, we'll examine what still sets them apart under the hood, in execution pipelines, in state backends, and in architectural philosophy, and, just as importantly, where those differences no longer matter in practice.
+ 
+ 
+ 
+ Whether you're optimizing a pipeline, upgrading to Spark 4.0, or architecting a greenfield platform to serve AI agents, you'll leave with clear criteria for choosing the right engine.",Sofie Zilberman,Data Engineering,30-minute deep dive talk,30,Track A,2026-10-20 15:30,2026-10-20 16:00,
+HD-041,How to Model Data Without Data?,"We love to say ""let the data speak for itself""—but what happens when there's no data to speak yet? New integrations, upstream APIs still under development, and tables that don't exist yet often force data engineers to design models before a single row reaches the warehouse.
+ 
+ In this talk, I'll share practical techniques for modeling without data: using API docs and contracts as your schema, designing dbt models around defensible assumptions, building flexibility for inevitable changes, and validating your model once the data finally arrives.
+ 
+ Drawing from real-world examples of extending production dbt pipelines while upstream systems were still being built, I'll share what worked, what broke, and how to reduce the risk of designing on faith. You'll leave with a practical framework for modeling with confidence—even without data in hand.",Tal Avraham,Data Analytics & BI,30-minute deep dive talk,30,Track C,2026-10-20 15:30,2026-10-20 16:00,
+HD-042,"One Workflow, Five Decisions: Does Everything Need to Be an Agent?","Agent, tool, service, LLM, deterministic logic, orchestrator, MCP, A2A. Agentic systems give us more building blocks than ever, which also means more ways to overcomplicate a workflow.
+ 
+ 
+ 
+ In this talk, I’ll take one workflow and walk through five recurring design decisions: what actually needs reasoning, when a tool is enough, when a regular service is the better choice, who should decide what runs next, and what happens when human input is missing.
+ 
+ 
+ 
+ Rather than starting with protocols or framework terminology, we’ll start with responsibilities and constraints. The goal is a practical decision framework for choosing the simplest component that fits the problem, and understanding where patterns such as MCP, A2A, human-in-the-loop, and deterministic execution actually help.",Dina Bavli,Data Science,15-minute regular talk,15,Track B,2026-10-20 15:30,2026-10-20 15:45,
+HD-043,Data as a Simulator: Planning Prices Without Ever Running an Experiment,"""You have a decision to make, a clear objective, and no way to run an experiment. Every price you set is the only price that customer sees, a bad decision costs real revenue rather than a dip in a dashboard, and the readout takes months.
+ 
+ So you use the only environment you have: your own historical data.
+ 
+ This talk walks through the pattern. Learn a response model from logged data, roll it forward across the full decision horizon to simulate the objective, then optimize over the decision path. It sits between supervised ML and reinforcement learning.
+ 
+ Three things that break in production. The optimizer hunts down wherever your model is confidently wrong. Prediction accuracy doesn't tell you whether the decision was good. And your decisions become your next training set.
+ 
+ Illustrated through price optimization, applicable wherever decisions are sequential and experiments are expensive. """,Tamir Shazman,Data Science,30-minute deep dive talk,30,Track D,2026-10-20 15:30,2026-10-20 16:00,
+HD-044,It Ran Itself: How We Built a Multi-Agent Incrementality Engine,"Geo-based incrementality testing is one of the most credible ways to measure true advertising impact. It's also one of the most tedious to run: messy data, manual cleaning, judgment calls that aren't documented, design decisions that take a senior analyst half a day. We ran enough of them to know the process itself was the problem. So we stopped doing it by hand. We built a multi-agent system where each agent owns one step: data quality, gap detection, test design selection, business calibration, report generation. No human in the loop unless the system decides it needs one. This talk is the story of how we built it, what broke, and what actually ran itself.",Maya Caspi Schliesser,Data Analytics & BI,15-minute regular talk,15,Track C,2026-10-20 16:05,2026-10-20 16:20,
+HD-045,Tabular Foundation Models Meet Boosted Trees: A CatBoost User's Honest Test,"For 20 years, gradient-boosted trees have dominated tabular ML.
+ 
+ In this talk we ask: Should tabular foundation models replace boosted trees as the default for tabular ML ? 
+ 
+ We'll cover tests made for a CatBoost user: benchmarks as a ceiling diagnostic, a reproduction of a recent distillation pattern for CPU deployment, 
+ 
+ an honest look at licensing, and a workflow for deciding when a TFM is worth it.",Tomer Yaniv,Data Science,15-minute regular talk,15,Track B,2026-10-20 16:05,2026-10-20 16:20,
+HD-046,Iceberg Won the Lakehouse. AI Changed the Question. Now What?,"Apache Iceberg won the open table format war, then AI changed what we want from our storage. Vector search, embeddings, and random-access training pipelines fight the scan-oriented architecture Iceberg was built on. This talk examines where Iceberg structurally struggles, benchmarks it against LanceDB on AI-shaped workloads, and maps the emerging landscape: AI-native formats, hybrid architectures, and vector-capable query engines. So if you thought the format wars were over, think again - the AI round is just getting started.",Yonatan Dolan,Data Engineering,15-minute regular talk,15,Track A,2026-10-20 16:05,2026-10-20 16:20,
+HD-047,When AI Meets Reality: Building the Real-Time Data Foundation for Operational AI,"A brilliant model can still make the wrong decision if it is working with stale data.
+ 
+ As AI moves from experimentation into business-critical operations, intelligence alone is no longer enough. Models and agents must understand what is happening now, act within milliseconds, capture the consequences of their actions, and use that updated reality to inform the next decision.
+ 
+ 
+ 
+ In this session, Oshrat Ben-Avi Zabludovitz and Guy Carmin will unpack the architecture behind this continuous operational AI loop: State → Context → Decision → Action → Consequence → Updated State
+ 
+ 
+ 
+ Drawing on real-world, mission-critical systems, they will explore the technical tradeoffs behind balancing RAM and disk, achieving predictable ultra-low latency at massive scale, building for resilience, and controlling infrastructure costs.
+ 
+ 
+ 
+ Discover what it takes to create a real-time data foundation that keeps AI fast, reliable, continuously grounded in reality, and economically sustainable in production","Oshrat Ben Avi Zabludovitz, Guy Carmin",Data Engineering,15-minute regular talk,15,Track D,2026-10-20 16:05,2026-10-20 16:20,
+HD-048,"Come for the Dashboards, Stay for the Heartbreak","As the Head of Data at a startup building a platform for couples therapy—and also, as a divorcée—I've spent the last year diving deep into the dynamics of love… one dataset at a time.
+ 
+ In this talk, I'll share what we've learned from analyzing thousands of hours of couples therapy sessions, from simple metrics to NLP. Who talks more—men or women? Does it matter who initiated the therapy? Can we detect patterns of escalation, empathy, or resolution from speech alone?
+ 
+ I'll also get into the engineering behind the insights: how we built measurable metrics to monitor LLM performance on questions that have no ground truth—because before you can trust what a model says about empathy, you need to know how to measure it. And all of this on some of the most intimate data there is, without ever compromising user privacy.",Efrat Aran,Data Analytics & BI,30-minute deep dive talk,30,Track C,2026-10-20 16:25,2026-10-20 16:55,
+HD-049,Metadata Meets AI: Making Data Agent-Ready,"AI agents are transforming how we work with data, but they still struggle when they lack context about which tables to use, what the data means, and how it is commonly queried. At Wix, a project that started as cataloging our trusted gold-layer tables became a production metadata ecosystem that supports data discovery, BI tools, and now AI agents.
+ 
+ 
+ 
+ In this session, we’ll share how we automated metadata creation with AI: creating table and column descriptions for about 900 gold-layer tables, building glossary definitions and mappings that improved agent results by 40%, and creating sample queries based on common usage patterns. We’ll show how this context helps agents break down business questions, find the right tables, and move from question to usable query faster, with practical lessons for teams that want to make their own data catalogs AI-ready without endless manual documentation.","Eden Fattal, Sapir Hirshberg",Data Engineering,30-minute deep dive talk,30,Track A,2026-10-20 16:25,2026-10-20 16:55,
+HD-050,Teaching Machines to See and Read: The Science and Applications of Multimodal AI,"Multimodality represents one of AI's most fascinating and business-actionable frontiers, yet its potential still remains largely untapped. 
+ 
+ 
+ 
+ In this session, we'll explore multimodal architectures from CLIP & SigLip to modern-day cutting-edge VLMs such as Gemma 4.
+ 
+ 
+ 
+ Learn about fine-tuning best practices in VLMs, as well as discover practical use cases where multimodal AI models deliver real business value.",Amit Bendor,Data Science,30-minute deep dive talk,30,Track B,2026-10-20 16:25,2026-10-20 16:55,
