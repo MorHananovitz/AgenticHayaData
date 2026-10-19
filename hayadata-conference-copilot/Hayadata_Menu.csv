@@ -1,0 +1,24 @@
+﻿meal,time,station,station_he,items,notes
+Coffee break,10:35-11:00,Health muesli,מוזלי בריאות,"Natural yogurt, fresh fruit salad, homemade granola, date syrup (silan) and halva strands.",
+Coffee break,10:35-11:00,From the Balkans to Tel Aviv,מהבלקן לתל אביב,"Phyllo pastry filled with cheese and spinach, hard-boiled egg, seasoned olives and tomato salsa.",
+Coffee break,10:35-11:00,Salad station: Caesar,עמדת הסלטיה: הקיסר,"A selection of crisp lettuce leaves, colorful endive, croutons, parmesan and walnuts.",
+Coffee break,10:35-11:00,Salad station: Panzanella,עמדת הסלטיה: פנצ'נלה,"Cucumber, red onion, peppers, tomato, carrot and radish, coarsely cut, with Kalamata olives, croutons and mint leaves in olive oil and lemon juice.",
+Coffee break,10:35-11:00,Drink stations,עמדות שתייה,"Oranges, water.","Listed as ""oranges"" (תפוזים) in the source."
+Coffee break,10:35-11:00,Coffee stations,עמדות קפה,"Espresso, cappuccino, latte, americano, black coffee, flavored teas. Lemon and mint are next to the hot water urn.","Milk options listed: regular, soy, oat, almond. The source lists espresso twice."
+Coffee break,10:35-11:00,Serving,,"Served in disposable, biodegradable, eco-friendly dishes.",Applies to the 10:35-11:00 coffee break menu.
+Breakfast,08:30-09:30,Bakery,בייקרי,"Hot pastries baked on site: crunch cakes and homemade yeast cakes. Mini croissants and rugelach, chocolate or butter. A mix of savory pastries.",
+Breakfast,All day,Cookies,,"A changing selection of homemade cookies: biscotti-cranberry, granola, chocolate chip, ginger, sesame.",Gluten-free cookies are in a separate jar. The source lists the cookies as available all day.
+Breakfast,08:30-09:30,Sarno's sandwiches: Anton's Caprese,הכריכים של סרנו: הקפרזה של אנטון,"Fresh mozzarella, pesto, tomato, green leaves and balsamic reduction.",A gluten-free option is available at the sandwich station.
+Breakfast,08:30-09:30,Sarno's sandwiches: Sabich,הכריכים של סרנו: סביח,"Eggplant rings, hard-boiled egg, Galilean tahini, pepper salsa and arugula leaves.",Includes an egg-free option. A gluten-free option is available at the sandwich station.
+Breakfast,08:30-09:30,Sarno's sandwiches: Avocado,הכריכים של סרנו: אבוקדו,"Avocado with roasted peppers, cilantro, green onion and lettuce leaves.",A gluten-free option is available at the sandwich station.
+Lunch,13:00-13:45,Main course: Pulled asado,אסאדו מפורק,Pulled asado served with mashed potato and our chimichurri.,Listed under main courses (מנות עיקריות).
+Lunch,13:00-13:45,Main course: London fish,לונדון פיש,"Tempura cod fillet served with tartar aioli, cornichon pickles and tiny oven-smashed potatoes.","The source ends this line with the mark for gluten-free (לל""ג), placed after the potatoes. Do not assume it covers the tempura fish."
+Lunch,13:00-13:45,Main course: Shawarma,שווארמה,"Thinly sliced turkey (hen) cuts served in pita halves with hummus, cabbage salad, amba and tahini. Plus stir-fried green beans.",
+Lunch,13:00-13:45,Main course: Vegan,טבעוני,"Tofu pieces and delicate vegetables in massaman curry sauce and coconut milk, served on white rice, with green onion, chopped cilantro, bean sprouts and roasted peanuts.",The source says the dish is meant to be vegan and gluten-free. It contains peanuts.
+Lunch,13:00-13:45,Sourdough bread bar,בר לחמי מחמצת,Sourdough breads.,Only the heading is visible in the menu images; no items are listed.
+Lunch,13:00-13:45,Salad bar: Canaanite tabbouleh,בר סלטים: טאבולה כנעני,"Smoked freekeh with black lentils, tomatoes, preserved lemon, harissa and plenty of fresh herbs.",
+Lunch,13:00-13:45,Salad bar: Tomato salad,בר סלטים: סלט עגבניות,"Tomatoes with basil, red onion, balsamic and quality olive oil.",
+Lunch,13:00-13:45,Salad bar: Chopped Israeli salad,בר סלטים: סלט ישראלי קצוץ,"Cucumber, tomato, olive oil and lemon, without onion.",
+Lunch,13:00-13:45,Salad bar: Health salad,בר סלטים: סלט בריאות,"Spinach, basalt lentils, cranberries, broccoli, edamame, walnuts, salted almonds, baladi sesame and citrus vinaigrette.",
+Lunch,13:00-13:45,Salad bar: Tahini,בר סלטים: טחינה,Tahini.,Only the heading is visible; the menu image is cut off here.
+Lunch,13:00-13:45,Desserts,קינוחים,"Macaron cookies in flavors, a personal basbousa cake, malabi, brownies, lemon meringue pie, and branded desserts.",The last item (branded desserts) is cut off in the menu image.

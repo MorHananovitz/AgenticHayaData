@@ -12,7 +12,11 @@ For the official program, tickets, and updates, always check the conference webs
 
 - Runs a short interview (one question at a time) and recommends 3 to 5 sessions ranked by fit.
 - Builds a chronological agenda around the fixed breaks (10:35-11:00, 12:55-13:45, 15:15-15:30) and flags conflicts.
-- Answers factual questions about sessions, speakers, tracks, companies, and times, using only the bundled data.
+- Answers factual questions about sessions, speakers (with LinkedIn links), tracks, companies, and times, using only the bundled data.
+- Knows the food and break schedule (breakfast, coffee breaks, lunch), the breakfast, 10:35 coffee break and lunch menus, and that sponsors give out swag during the breaks.
+- Lists the sponsors and community partners.
+- Shares the recording schedule of the Data & AI podcast ("Talking with Mor Nitzan"), recorded live at the conference.
+- Opens every conversation with: "First of all - do you know how lucky you are to get a ticket?"
 - Replies in the language the attendee uses.
 
 All times are local conference time in Israel (Asia/Jerusalem).
@@ -37,7 +41,10 @@ hayadata-conference-copilot-skill/
 └── hayadata-conference-copilot/        <- the skill folder
     ├── SKILL.md                        <- required: frontmatter + instructions
     ├── Hayadata_Sessions.csv           <- 50 sessions
-    └── Hayadata_Speakers.csv           <- 57 speakers
+    ├── Hayadata_Speakers.csv           <- 57 speakers, with LinkedIn links
+    ├── Hayadata_Podcast.csv            <- Data & AI podcast recording schedule
+    ├── Hayadata_Menu.csv               <- breakfast, 10:35 coffee break and lunch menus
+    └── Hayadata_Sponsors.csv           <- sponsors and community partners
 ```
 
 The skill is the `hayadata-conference-copilot/` folder. `SKILL.md` must stay at its root, and the folder name must match the `name` field in the frontmatter.
@@ -61,18 +68,21 @@ zip -r hayadata-conference-copilot.skill hayadata-conference-copilot -x "*.DS_St
 The schedule can change before the event. If the program on [haya-data.com](https://haya-data.com/) differs from the bundled CSVs, update the files and re-package. Keep these columns:
 
 - Sessions: `session_id, title, description, speakers, domain, talk_format, duration_minutes, track, start_time, end_time_calculated, schedule_note`
-- Speakers: `speaker_name, tagline, bio, speaker_title, company`
+- Speakers: `speaker_name, tagline, bio, speaker_title, company, linkedin_url`
+- Podcast: `start_time, end_time, format, title_he, title_en, guests, guest_titles, note`
+- Menu: `meal, time, station, station_he, items, notes` (breakfast, the 10:35-11:00 coffee break and lunch have menus; the 15:15 coffee break does not yet)
+- Sponsors: `name, type, website`
 
-If counts, hours, or break times change, update `SKILL.md` to match (it mentions 50 sessions, 09:45 to 16:55, the fixed breaks, and the HD-019 lunch overlap).
+If counts, hours, or break times change, update `SKILL.md` to match (it mentions 50 sessions, 09:45 to 16:55, the fixed breaks, the food schedule, and the HD-019 lunch overlap).
 
 ## Notes
 
 - The CSVs use a UTF-8 BOM and CRLF line endings. `.gitattributes` stops git from rewriting them.
 - The banner image is the official hayaData 2026 save-the-date artwork. It belongs to hayaData and is not covered by the MIT License.
-- Session titles, descriptions, and speaker bios come from the hayaData program and belong to the conference and its speakers. The skill answers only from this data and does not invent sessions, speakers, or times.
+- Session titles, descriptions, speaker bios, LinkedIn links, and the sponsor list come from the hayaData website and program and belong to the conference and its speakers. The podcast schedule comes from the Data & AI podcast's conference lineup. The skill answers only from this data and does not invent sessions, speakers, or times.
 
 ## License
 
 The skill instructions (`SKILL.md`) and this README are released under the [MIT License](LICENSE).
 
-The MIT License does not cover `Hayadata_Sessions.csv` and `Hayadata_Speakers.csv`, or the banner image in `assets/`. Their content (session titles and descriptions, speaker names and bios, and the save-the-date artwork) comes from hayaData and remains the property of the conference and its speakers.
+The MIT License does not cover the five CSV files or the banner image in `assets/`. Their content (session titles and descriptions, speaker names and bios, and the save-the-date artwork) comes from hayaData and remains the property of the conference and its speakers.
