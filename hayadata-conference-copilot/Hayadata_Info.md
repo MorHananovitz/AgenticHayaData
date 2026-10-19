@@ -28,6 +28,11 @@ The organizers encourage using public transportation whenever possible.
 - Validate your parking ticket at the discount parking machine on the conference floor.
 - More parking options near the venue: https://www.google.com/maps/search/Parking/@32.0654451,34.7638191,15z/data=!3m1!4b1!4m7!2m6!3m5!2sInterContinental+David+Tel+Aviv,+an+IHG+Hotel!3s0x150265dffad6000f:0xe6e0fd47804a4893!4m2!1d34.7638191!2d32.0654096?entry=ttu
 
+### Bicycles and scooters
+- There is no designated parking area for bicycles or scooters at the venue.
+- You may park them on the 4th floor of the parking garage, or outside the hotel.
+- hayaData, the production company, and the hotel cannot be held responsible for any loss, theft, or damage.
+
 ## Food and drinks
 
 - The conference provides a light breakfast, lunch, and coffee breaks, with hot and cold drinks available throughout the day.

@@ -14,9 +14,9 @@ For the official program, tickets, and updates, always check the conference webs
 - Builds a chronological agenda around the fixed breaks (10:35-11:00, 13:00-13:45, 15:15-15:30) and flags conflicts.
 - Answers factual questions about sessions, speakers (with LinkedIn links), tracks, companies, and times, using only the bundled data.
 - Knows the food and break schedule (breakfast, coffee breaks, lunch), the breakfast, 10:35 coffee break and lunch menus, and that sponsors give out swag during the breaks.
-- Answers logistics questions: registration and entry, ticket transfers, the conference app, directions and parking, kosher and food policy, the nursing room, emergency guidance, and the code of conduct.
+- Answers logistics questions: registration and entry, ticket transfers, the conference app, directions, parking, bicycles and scooters, kosher and food policy, the nursing room, emergency guidance, and the code of conduct.
 - Lists the sponsors and community partners.
-- Shares the recording schedule of the Data & AI podcast ("Talking with Mor Nitzan"), recorded live at the conference.
+- Shares the recording schedules of the two podcasts recorded at the conference: Data & AI ("Talking with Mor Nitzan") and Data Bites.
 - Opens every conversation with: "First of all - do you know how lucky you are to get a ticket?"
 - Replies in the language the attendee uses.
 
@@ -33,6 +33,8 @@ All times are local conference time in Israel (Asia/Jerusalem).
 - "Who are the sponsors, and when do they give out swag?"
 - "Where can I park, and how do I get there by light rail?"
 - "Can I give my ticket to a colleague?"
+- "Where can I leave my scooter?"
+- "Who is recorded for Data Bites before lunch?"
 - "Give me the LinkedIn profile of the speaker on the graph database talk."
 
 ## Repository layout
@@ -49,7 +51,7 @@ hayadata-conference-copilot-skill/
     ├── SKILL.md                        <- required: frontmatter + instructions
     ├── Hayadata_Sessions.csv           <- 50 sessions
     ├── Hayadata_Speakers.csv           <- 57 speakers, with LinkedIn links
-    ├── Hayadata_Podcast.csv            <- Data & AI podcast recording schedule
+    ├── Hayadata_Podcast.csv            <- Data & AI and Data Bites podcast schedules
     ├── Hayadata_Info.md                <- logistics: registration, app, transport, parking, kosher, safety, code of conduct
     ├── Hayadata_Menu.csv               <- breakfast, 10:35 coffee break and lunch menus
     └── Hayadata_Sponsors.csv           <- sponsors and community partners
@@ -77,7 +79,7 @@ The schedule can change before the event. If the program on [haya-data.com](http
 
 - Sessions: `session_id, title, description, speakers, domain, talk_format, duration_minutes, track, start_time, end_time_calculated, schedule_note`
 - Speakers: `speaker_name, tagline, bio, speaker_title, company, linkedin_url`
-- Podcast: `start_time, end_time, format, title_he, title_en, guests, guest_titles, note`
+- Podcast: `podcast, start_time, end_time, format, title_he, title_en, guests, guest_titles, note`
 - Menu: `meal, time, station, station_he, items, notes` (breakfast, the 10:35-11:00 coffee break and lunch have menus; the 15:15 coffee break does not yet)
 - Sponsors: `name, type, website`
 
@@ -87,7 +89,7 @@ If counts, hours, or break times change, update `SKILL.md` to match (it mentions
 
 - The CSVs use a UTF-8 BOM and CRLF line endings. `.gitattributes` stops git from rewriting them.
 - The banner image is the official hayaData 2026 save-the-date artwork. It belongs to hayaData and is not covered by the MIT License.
-- Session titles, descriptions, speaker bios, LinkedIn links, and the sponsor list come from the hayaData website and program and belong to the conference and its speakers. The podcast schedule comes from the Data & AI podcast's conference lineup, the menus come from the conference catering menus, and the conference information comes from the hayaData website. The skill answers only from this data and does not invent sessions, speakers, or times.
+- Session titles, descriptions, speaker bios, LinkedIn links, and the sponsor list come from the hayaData website and program and belong to the conference and its speakers. The podcast schedules come from the Data & AI and Data Bites conference lineups, the menus come from the conference catering menus, and the conference information comes from the hayaData website. The skill answers only from this data and does not invent sessions, speakers, or times.
 
 ## License
 
