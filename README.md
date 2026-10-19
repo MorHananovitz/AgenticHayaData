@@ -2,7 +2,7 @@
 
 # Hayadata Conference Copilot (Claude skill)
 
-An unofficial Claude skill for attendees of [hayaData 2026](https://haya-data.com/), the not-for-profit data community conference held on 20 October 2026 at the David InterContinental Hotel, Tel Aviv. It helps attendees find relevant talks, build a conflict-free personal agenda, and look up facts about sessions and speakers.
+An unofficial Claude skill for attendees of [hayaData 2026](https://haya-data.com/), the not-for-profit data community conference held on 20 October 2026 at the David InterContinental Hotel, Tel Aviv. It helps attendees find relevant talks, build a conflict-free personal agenda, and look up facts about sessions, speakers, food and menus, the Data & AI podcast schedule, and sponsors.
 
 For the official program, tickets, and updates, always check the conference website: **https://haya-data.com/**
 
@@ -11,9 +11,10 @@ For the official program, tickets, and updates, always check the conference webs
 ## What it does
 
 - Runs a short interview (one question at a time) and recommends 3 to 5 sessions ranked by fit.
-- Builds a chronological agenda around the fixed breaks (10:35-11:00, 12:55-13:45, 15:15-15:30) and flags conflicts.
+- Builds a chronological agenda around the fixed breaks (10:35-11:00, 13:00-13:45, 15:15-15:30) and flags conflicts.
 - Answers factual questions about sessions, speakers (with LinkedIn links), tracks, companies, and times, using only the bundled data.
 - Knows the food and break schedule (breakfast, coffee breaks, lunch), the breakfast, 10:35 coffee break and lunch menus, and that sponsors give out swag during the breaks.
+- Answers logistics questions: registration and entry, ticket transfers, the conference app, directions and parking, kosher and food policy, the nursing room, emergency guidance, and the code of conduct.
 - Lists the sponsors and community partners.
 - Shares the recording schedule of the Data & AI podcast ("Talking with Mor Nitzan"), recorded live at the conference.
 - Opens every conversation with: "First of all - do you know how lucky you are to get a ticket?"
@@ -27,6 +28,12 @@ All times are local conference time in Israel (Asia/Jerusalem).
 - "I'll be at Hayadata from 13:45 to 16:00. Build me an agenda."
 - "Who is speaking at the Track B session after lunch?"
 - "Swap the 14:00 talk in my agenda for something on analytics."
+- "What is for lunch, and is there a vegan option?"
+- "When is the podcast recording on AI and data teams?"
+- "Who are the sponsors, and when do they give out swag?"
+- "Where can I park, and how do I get there by light rail?"
+- "Can I give my ticket to a colleague?"
+- "Give me the LinkedIn profile of the speaker on the graph database talk."
 
 ## Repository layout
 
@@ -43,6 +50,7 @@ hayadata-conference-copilot-skill/
     ├── Hayadata_Sessions.csv           <- 50 sessions
     ├── Hayadata_Speakers.csv           <- 57 speakers, with LinkedIn links
     ├── Hayadata_Podcast.csv            <- Data & AI podcast recording schedule
+    ├── Hayadata_Info.md                <- logistics: registration, app, transport, parking, kosher, safety, code of conduct
     ├── Hayadata_Menu.csv               <- breakfast, 10:35 coffee break and lunch menus
     └── Hayadata_Sponsors.csv           <- sponsors and community partners
 ```
@@ -73,16 +81,16 @@ The schedule can change before the event. If the program on [haya-data.com](http
 - Menu: `meal, time, station, station_he, items, notes` (breakfast, the 10:35-11:00 coffee break and lunch have menus; the 15:15 coffee break does not yet)
 - Sponsors: `name, type, website`
 
-If counts, hours, or break times change, update `SKILL.md` to match (it mentions 50 sessions, 09:45 to 16:55, the fixed breaks, the food schedule, and the HD-019 lunch overlap).
+If counts, hours, or break times change, update `SKILL.md` to match (it mentions 50 sessions, 09:45 to 16:55, the fixed breaks, and the food schedule).
 
 ## Notes
 
 - The CSVs use a UTF-8 BOM and CRLF line endings. `.gitattributes` stops git from rewriting them.
 - The banner image is the official hayaData 2026 save-the-date artwork. It belongs to hayaData and is not covered by the MIT License.
-- Session titles, descriptions, speaker bios, LinkedIn links, and the sponsor list come from the hayaData website and program and belong to the conference and its speakers. The podcast schedule comes from the Data & AI podcast's conference lineup. The skill answers only from this data and does not invent sessions, speakers, or times.
+- Session titles, descriptions, speaker bios, LinkedIn links, and the sponsor list come from the hayaData website and program and belong to the conference and its speakers. The podcast schedule comes from the Data & AI podcast's conference lineup, the menus come from the conference catering menus, and the conference information comes from the hayaData website. The skill answers only from this data and does not invent sessions, speakers, or times.
 
 ## License
 
 The skill instructions (`SKILL.md`) and this README are released under the [MIT License](LICENSE).
 
-The MIT License does not cover the five CSV files or the banner image in `assets/`. Their content (session titles and descriptions, speaker names and bios, and the save-the-date artwork) comes from hayaData and remains the property of the conference and its speakers.
+The MIT License does not cover the five CSV files, `Hayadata_Info.md`, or the banner image in `assets/`. Their content (session titles and descriptions, speaker names, bios and links, sponsor names, menus, the podcast lineup, the conference information, and the save-the-date artwork) comes from hayaData and remains the property of the conference and its speakers.

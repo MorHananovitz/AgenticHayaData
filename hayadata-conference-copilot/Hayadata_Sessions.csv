@@ -159,7 +159,7 @@ HD-019,Feed Your LLM Live Enterprise Data - With Zero-Code AI Context,"""Generat
  
  
  
- The result is an AI-ready knowledge layer that keeps your LLM as current as your enterprise data - with no glue code, no manual integration, and no synchronization headaches.""","Ori Kelsi, Eyal Shoham",Data Engineering,30-minute deep dive talk,30,Track D,2026-10-20 12:30,2026-10-20 13:00,Overlaps fixed lunch (12:55-13:45); verify source schedule.
+ The result is an AI-ready knowledge layer that keeps your LLM as current as your enterprise data - with no glue code, no manual integration, and no synchronization headaches.""","Ori Kelsi, Eyal Shoham",Data Engineering,30-minute deep dive talk,30,Track D,2026-10-20 12:30,2026-10-20 13:00,
 HD-020,Synthetic Data: How Something Fake Prepares for Anything Real,"This talk is about engineering synthetic data to hit all three: realistic, complex, and diverse. I'll walk through grounding it in real distributions, deliberately injecting the mess and edge cases real systems produce, and expanding coverage into the long tail on purpose instead of by accident. Then the loop that makes it compound: as new failures surface in production, they feed back into your synthetic scenarios — so your agent keeps getting tested against a harder, broader world and keeps getting better over time.
  
  
